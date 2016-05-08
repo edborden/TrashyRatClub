@@ -9,6 +9,9 @@ dependencies:
   override:
     - npm i
     - bower i
+test:
+  override:
+    - echo "test"
 deployment:
   production:
     branch: master
