@@ -12,6 +12,9 @@ export default Model.extend({
   longitude: attr('number'),
   name: attr('string'),
   eventType: attr('string'),
-  healthScore: 3
+  ratCount: attr('number'),
+  dirtyWaterCount: attr('number'),
+  trashCount: attr('number'),
+  healthScore: attr('number')
 
 });
