@@ -1,4 +1,7 @@
 import Ember from 'ember';
+import ratsData from 'trashy-rat-club/utils/rats';
+import watersData from 'trashy-rat-club/utils/waters';
+import trashesData from 'trashy-rat-club/utils/trashes';
 
 const {
   Route
@@ -7,26 +10,9 @@ const {
 export default Route.extend({
   beforeModel() {
     this.store.pushPayload({
-      rats: [
-        {
-          "park_borough" : "BRONX",
-          "unique_key" : "15633897",
-          "longitude" : "-73.89000626904053",
-          "latitude" : "40.85551279775197"
-        },
-        {
-          "park_borough" : "MANHATTAN",
-          "unique_key" : "15633304",
-          "longitude" : "-73.97698314758436",
-          "latitude" : "40.74316088098852"
-        },
-        {
-          "park_borough" : "BROOKLYN",
-          "unique_key" : "15633599",
-          "longitude" : "-73.98092864957985",
-          "latitude" : "40.68890317557533"
-        }
-      ]  
+      rats: ratsData,
+      waters: watersData,
+      trashes: trashesData
     });
   }
 });

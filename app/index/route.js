@@ -6,6 +6,6 @@ const {
 
 export default Route.extend({
   model() {
-    return this.store.peekAll('rat');
+    return this.store.peekAll('trash');
   }
 });
