@@ -3,9 +3,28 @@
   {{#each model as |event|}}
     {{#event-pin event=event lat=event.latitude lng=event.longitude}}
       <h4>{{event.name}}</h4>
-      <p>Rats: {{event.ratCount}}</p>
-      <p>Trash: {{event.trashCount}}</p>
-      <p>Tainted waters: {{event.dirtyWaterCount}}</p>
+      <div class="row scores">
+        <div class="col-xs-4">
+          {{event.ratCount}}
+        </div>
+        <div class="col-xs-4">
+          {{event.trashCount}}
+        </div>
+        <div class="col-xs-4">
+          {{event.dirtyWaterCount}}
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-xs-4">
+          Rats
+        </div>
+        <div class="col-xs-4">
+          Trash
+        </div>
+        <div class="col-xs-4">
+          Water
+        </div>
+      </div>
     {{/event-pin}}
   {{/each}}
 {{/leaflet-map}}
