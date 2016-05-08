@@ -1,8 +1,16 @@
-{{#leaflet-map zoomControl=false attributionControl=false lat=40.8643221 lng=-73.84338199999999 zoom=10}}
+{{#leaflet-map zoomControl=false attributionControl=false lat=40.6943221 lng=-73.93338199999999 zoom=11}}
   {{tile-layer url='https://{s}.tiles.mapbox.com/v3/edborden.02o36pf8/{z}/{x}/{y}.png'}}
   {{#each model as |event|}}
     {{#event-pin event=event lat=event.latitude lng=event.longitude}}
-      <h4>{{event.name}}</h4>
+      <h4>
+        {{event.name}}
+        {{#if (gt event.healthScore 3)}}
+          <span class="red">...ewe</span>
+        {{/if}}
+        {{#if (gt event.healthScore 8)}}
+          <span class="red">FFFFILTHY!!!</span>
+        {{/if}}
+      </h4>
       <div class="row scores">
         <div class="col-xs-4">
           {{event.ratCount}}
@@ -26,7 +34,9 @@
         </div>
       </div>
       {{#link-to 'event' event}}
-        More
+        <button class="btn btn-xs btn-warning">
+          Details
+        </button>
       {{/link-to}}
     {{/event-pin}}
   {{/each}}
