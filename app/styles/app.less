@@ -2,6 +2,8 @@
 @import "helpers";
 @import "map";
 @import "scores";
+@import "event";
+@import "colors";
 
 body {
   -webkit-user-select: none;
@@ -10,10 +12,8 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent;
   overflow: hidden;
-  background-color: black;
   background-image: url("../images/front.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+  .has-background
 }
+
+.inconsolata {font-family: 'Inconsolata'}

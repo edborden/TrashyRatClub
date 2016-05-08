@@ -57,9 +57,8 @@ export default MarkerLayer.extend({
   willDestroyLayer() {
     // this._super(...arguments);
     if (this.get('hasBlock')) {
-      // causing errors, handled by spiderfier anyway
-      // this._layer.closePopup();
-      // this._layer.unbindPopup();
+      this._layer.closePopup();
+      this._layer.unbindPopup();
       delete this._popup;
       delete this._firstNode;
       delete this._lastNode;
