@@ -2,6 +2,7 @@ import Ember from 'ember';
 import ratsData from 'trashy-rat-club/utils/rats';
 import watersData from 'trashy-rat-club/utils/waters';
 import trashesData from 'trashy-rat-club/utils/trashes';
+import eventsData from 'trashy-rat-club/utils/events';
 
 const {
   Route
@@ -12,7 +13,8 @@ export default Route.extend({
     this.store.pushPayload({
       rats: ratsData,
       waters: watersData,
-      trashes: trashesData
+      trashes: trashesData,
+      events: eventsData
     });
   }
 });

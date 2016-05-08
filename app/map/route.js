@@ -6,6 +6,6 @@ const {
 
 export default Route.extend({
   model() {
-    return this.store.peekAll('trash');
+    return this.store.peekAll('event');
   }
 });
