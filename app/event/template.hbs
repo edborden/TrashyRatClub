@@ -3,4 +3,9 @@
     <p class="name">{{model.name}}</p>
     <p class="yellow">{{model.eventLocation}} {{moment-from-now model.startDateTime}}</p>
   </div>
+  <div class="chart">
+    {{#if model.healthScore}}
+      {{c3-chart data=model.proportions config=config legend=false labels=false}}
+    {{/if}}
+  </div>
 </div>

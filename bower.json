@@ -6,6 +6,8 @@
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
     "bootstrap": "^3.3.6",
-    "leaflet": "~0.7.7"
+    "leaflet": "~0.7.7",
+    "d3": "^3.5.17",
+    "c3": "^0.4.11"
   }
 }
