@@ -16,6 +16,7 @@ export default Model.extend({
   dirtyWaterCount: attr('number'),
   trashCount: attr('number'),
   healthScore: attr('number'),
-  eventLocation: attr('string')
+  eventLocation: attr('string'),
+  startDateTime: attr('string')
 
 });

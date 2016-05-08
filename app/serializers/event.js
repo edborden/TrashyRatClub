@@ -14,6 +14,8 @@ export default DS.RESTSerializer.extend({
     delete hash['event_name'];
     hash['eventLocation'] = hash['event_location'];
     delete hash['event_location'];
+    hash['startDateTime'] = hash['start_date_time'];
+    delete hash['start_date_time'];
     return this._super(typeHash, hash);
   }
 });
