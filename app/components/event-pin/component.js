@@ -5,7 +5,7 @@ const EventMarker = L.Icon.extend({
 
   options: {
     iconSize: [25, 25],
-    popupAnchor: [1, -80]
+    popupAnchor: [12, 0]
   },
 
   initialize(options) {
@@ -45,7 +45,7 @@ export default MarkerLayer.extend({
       this._popup = this.L.popup({}, this._layer);
       this._popup.setContent(this.get('destinationElement'));
       // register popup on leaflet layer so it can be accessed by spiderfier, don't want it to be called normally
-      // this._layer.bindPopup(this._popup);
+      this._layer.bindPopup(this._popup);
       this._layer._popup = this._popup;
 
       this._hijackPopup();
