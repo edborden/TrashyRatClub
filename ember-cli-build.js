@@ -4,7 +4,13 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    babel: {
+      includePolyfill: true,
+      optional: ['es7.decorators']
+    },
+    'ember-cli-qunit': {
+      useLintTree: false
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
