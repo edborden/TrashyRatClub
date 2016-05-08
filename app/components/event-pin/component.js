@@ -4,7 +4,7 @@ import MarkerLayer from 'trashy-rat-club/components/marker-layer';
 const EventMarker = L.Icon.extend({
 
   options: {
-    iconSize: [65, 65],
+    iconSize: [25, 25],
     popupAnchor: [1, -80]
   },
 
