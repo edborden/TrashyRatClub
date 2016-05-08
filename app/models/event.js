@@ -11,6 +11,7 @@ export default Model.extend({
   latitude: attr('number'),
   longitude: attr('number'),
   name: attr('string'),
-  eventType: attr('string')
+  eventType: attr('string'),
+  healthScore: 3
 
 });

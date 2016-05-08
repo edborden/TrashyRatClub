@@ -1,6 +1,6 @@
 {{#leaflet-map zoomControl=false attributionControl=false lat=40.8643221 lng=-73.84338199999999 zoom=10}}
-  {{tile-layer url='https://{s}.tiles.mapbox.com/v3/edborden.i7622aec/{z}/{x}/{y}.png'}}
+  {{tile-layer url='https://{s}.tiles.mapbox.com/v3/edborden.02o36pf8/{z}/{x}/{y}.png'}}
   {{#each model as |event|}}
-    {{marker-layer lat=event.latitude lng=event.longitude}}
+    {{event-pin event=event lat=event.latitude lng=event.longitude}}
   {{/each}}
 {{/leaflet-map}}
